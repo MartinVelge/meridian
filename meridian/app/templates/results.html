@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Results</title>
+<h1>Results - {{ version }}</h1>
+<p>R² Score: {{ '%.4f'|format(result['r2']) }}</p>
+<h3>Coefficients</h3>
+<ul>
+  {% for feat, coef in result['coefficients'].items() %}
+    <li>{{ feat }}: {{ '%.4f'|format(coef) }}</li>
+  {% endfor %}
+</ul>
+<p>Intercept: {{ '%.4f'|format(result['intercept']) }}</p>
+<a href="{{ url_for('setup') }}">Run again</a>
