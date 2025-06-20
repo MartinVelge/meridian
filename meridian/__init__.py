@@ -20,3 +20,4 @@ __version__ = "1.0.0"
 from meridian import analysis
 from meridian import data
 from meridian import model
+from meridian import app
